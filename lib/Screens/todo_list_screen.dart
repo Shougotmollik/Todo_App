@@ -14,21 +14,39 @@ class _TodoListScreenState extends State<TodoListScreen> {
       appBar: AppBar(
         title: const Text("Todo List"),
       ),
-      body: ListView.builder(
-        itemCount: 5,
-        itemBuilder: (context, index) {
-          return const ListTile(
-            title: Text("Title Here"),
-            subtitle: Column(
+      body: _buildItemList(),
+    );
+  }
+
+  ListView _buildItemList() {
+    return ListView.builder(
+      itemCount: 5,
+      itemBuilder: (context, index) {
+        return Card(
+          elevation: 3,
+          child: ListTile(
+            title: const Text("Title Here"),
+            subtitle: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text("Description"),
                 Text("Date"),
               ],
             ),
-          );
-        },
-      ),
+            trailing: _buildIconButton(),
+          ),
+        );
+      },
     );
+  }
+
+  Widget _buildIconButton() {
+    return CircleAvatar(
+      child: Icon(_getIcon(true)),
+    );
+  }
+
+  IconData _getIcon(bool isDone) {
+    return isDone ? Icons.done : Icons.close;
   }
 }
