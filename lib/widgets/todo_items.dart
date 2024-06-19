@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:todo_app/entities/todo.dart';
 
 class TodoItems extends StatelessWidget {
-  const TodoItems({super.key, required this.todo});
+  const TodoItems(
+      {super.key, required this.todo, required this.onIconButtonPress});
 
   final Todo todo;
+  final VoidCallback onIconButtonPress;
 
   @override
   Widget build(BuildContext context) {
@@ -37,8 +39,11 @@ class TodoItems extends StatelessWidget {
   }
 
   Widget _buildIconButton(bool isDone) {
-    return CircleAvatar(
-      child: Icon(_getIcon(true)),
+    return GestureDetector(
+      onTap: onIconButtonPress,
+      child: CircleAvatar(
+        child: Icon(_getIcon(true)),
+      ),
     );
   }
 
