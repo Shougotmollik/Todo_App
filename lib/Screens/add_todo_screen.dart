@@ -45,7 +45,10 @@ class _AddTodoScreenState extends State<AddTodoScreen> {
                 ),
               ),
               const SizedBox(height: 16),
-              ElevatedButton(onPressed: () {}, child: const Text("Add")),
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text("Add"),
+              ),
             ],
           ),
         ),
