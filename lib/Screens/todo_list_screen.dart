@@ -19,7 +19,11 @@ class _TodoListScreenState extends State<TodoListScreen> {
         title: const Text("Todo List"),
       ),
       body: TodoItems(
-        todo: Todo("Title", "description", DateTime.now()),
+        todo: Todo(
+          "Title",
+          "description",
+          DateTime.now(),
+        ),
         onIconButtonPress: () {},
       ),
       floatingActionButton: FloatingActionButton.extended(
