@@ -1,4 +1,4 @@
-# task_manager
+# live_score_app
 
 A new Flutter project.
 
