@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:live_score_app/views/screens/home_screen/home_screen.dart';
 import 'package:live_score_app/views/screens/home_screen/main_nav_bar.dart';
 
 class SplashScreen extends StatefulWidget {
