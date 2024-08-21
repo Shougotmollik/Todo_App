@@ -33,7 +33,7 @@ class _MainNavBarState extends State<MainNavBar> {
           showSelectedLabels: true,
           showUnselectedLabels: true,
           unselectedItemColor: Colors.deepOrangeAccent.shade100,
-          selectedItemColor: Colors.deepOrangeAccent.shade400,
+          selectedItemColor: Colors.deepOrangeAccent,
           items: const [
             BottomNavigationBarItem(
                 icon: Icon(Icons.home_filled), label: "Home"),
